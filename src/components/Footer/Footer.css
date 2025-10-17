@@ -1,0 +1,48 @@
+.footer {
+  padding: 50px 20px;
+  text-align: center;
+  background: rgba(13, 13, 13, 0.85);
+  backdrop-filter: blur(10px);
+  border-top: 2px solid rgba(0, 255, 255, 0.2);
+}
+
+.footer p {
+  color: rgba(255, 255, 255, 0.6);
+  margin-top: 20px;
+  font-size: 0.95rem;
+}
+
+.footer .social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-bottom: 10px;
+}
+
+.footer .social-icons a {
+  color: #00ffff;
+  font-size: 1.5rem;
+  padding: 10px;
+  border-radius: 50%;
+  background: rgba(0, 255, 255, 0.05);
+  transition: all 0.3s ease;
+}
+
+.footer .social-icons a:hover {
+  color: #ff00ff;
+  background: rgba(255, 0, 255, 0.15);
+  transform: scale(1.2);
+  box-shadow: 0 5px 20px rgba(255, 0, 255, 0.4);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .footer {
+    padding: 40px 15px;
+  }
+
+  .footer .social-icons a {
+    font-size: 1.3rem;
+    padding: 8px;
+  }
+}
