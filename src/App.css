@@ -1,11 +1,35 @@
-/* Global Scrollbar Hide */
-html, body {
-  overflow: -moz-scrollbars-none; /* Firefox */
-  -ms-overflow-style: none;       /* IE 10+ */
-  scrollbar-width: none;          /* Firefox */
+:root {
+  --navbar-height: 70px; /* Same height as your Navbar */
 }
 
-html::-webkit-scrollbar, 
+/* Hide global scrollbar */
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  overflow-y: auto;
+  -ms-overflow-style: none;  /* IE, Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+html::-webkit-scrollbar,
 body::-webkit-scrollbar {
-  display: none;                  /* Chrome, Safari, Opera */
+  display: none;             /* Chrome, Safari, Opera */
+}
+
+/* Navbar fixed at top (already in Navbar.css) */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--navbar-height);
+  z-index: 1000;
+}
+
+/* Make sure rest of the content starts below navbar */
+.main-content {
+  margin-top: var(--navbar-height);
+  min-height: calc(100vh - var(--navbar-height));
+  overflow-x: hidden;
+  background: linear-gradient(135deg, #0d0d0d, #1a1a1a);
 }
